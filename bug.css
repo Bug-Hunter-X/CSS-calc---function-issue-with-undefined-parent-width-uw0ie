@@ -1,0 +1,10 @@
+The following CSS code causes unexpected behavior in certain browsers:
+
+```css
+div {
+  width: calc(50% - 10px);
+  /* Other styles */
+}
+```
+
+The `calc()` function is used to calculate the width of the div element. However, if the parent element does not have a defined width, the calculation may not work as expected. In some browsers, this can lead to the div element not being rendered correctly, or having an incorrect width.
