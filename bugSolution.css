@@ -1,0 +1,14 @@
+To fix this issue, ensure that the parent element has a defined width.  You can do this by setting a specific width or by using a width relative to its parent element.  Here's an example:
+
+```css
+.container {
+  width: 80%; /* Or a fixed width like 800px */
+}
+
+div {
+  width: calc(50% - 10px);
+  /* Other styles */
+}
+```
+
+By setting the width of the `.container`, you are providing the `calc()` function with the necessary information it needs to correctly calculate the width of the `div` element.  If you cannot set a width on the direct parent, you may need to traverse up the DOM tree and set a width higher up.
